@@ -87,12 +87,10 @@ dependencies {
     vineflowerDecompilerClasspath(libs.vineflower)
     modImplementation(libs.fabric.loader)
     modImplementation(libs.modmenu)
-    modImplementation(libs.multiconnect.api) {
-        isTransitive = false
-    }
     modCompileOnly(libs.viafabricplus.api) {
         isTransitive = false
     }
+    modCompileOnly("com.viaversion:viaversion-common:4.9.2")
 
     // [1] declare fabric-api dependency...
     fabricApi(libs.fabric.api)

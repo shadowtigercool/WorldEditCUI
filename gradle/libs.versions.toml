@@ -3,17 +3,17 @@ format = { version = "1.1" }
 
 [versions]
 indra = "3.1.3"
-minecraft = "1.20.3"
-fabricLoader = "0.15.0"
-fabricApi = "0.91.1+1.20.3"
-modmenu = "9.0.0-pre.1"
+minecraft = "24w04a"
+fabricLoader = "0.15.6"
+fabricApi = "0.95.2+1.20.5"
+modmenu = "9.0.0"
 multiconnect = "1.5.10"
-viafabricplus = "2.9.0"
+viafabricplus = "3.0.6"
 vineflower = "1.9.3"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
-parchment = { module = "org.parchmentmc.data:parchment-1.20.2", version = "2023.10.22" }
+parchment = { module = "org.parchmentmc.data:parchment-1.20.3", version = "2023.12.31" }
 fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabricLoader" }
 fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabricApi" }
 modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
@@ -23,10 +23,10 @@ vineflower = { module = "org.vineflower:vineflower", version.ref = "vineflower" 
 worldedit = { module = "com.sk89q.worldedit:worldedit-fabric-mc1.20.2", version = "7.2.17" }
 
 [plugins]
-curseForgeGradle = { id = "net.darkhax.curseforgegradle", version = "1.1.17" }
+curseForgeGradle = { id = "net.darkhax.curseforgegradle", version = "1.1.18" }
 indra-git = { id = "net.kyori.indra.git", version.ref = "indra" }
-javaEcosystemCapabilities = { id = "org.gradlex.java-ecosystem-capabilities", version = "1.3.1" }
-loom = { id = "fabric-loom", version = "1.4.4" }
+javaEcosystemCapabilities = { id = "org.gradlex.java-ecosystem-capabilities", version = "1.4" }
+loom = { id = "fabric-loom", version = "1.5.6" }
 minotaur = { id = "com.modrinth.minotaur", version = "2.8.7" }
 publishGithubRelease = { id = "ca.stellardrift.publish-github-release", version = "0.1.0" }
 versions = { id = "com.github.ben-manes.versions", version = "0.50.0" }
