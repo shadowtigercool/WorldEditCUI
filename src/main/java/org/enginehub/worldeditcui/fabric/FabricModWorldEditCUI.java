@@ -11,7 +11,6 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderContext;
 import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents;
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
-import net.minecraft.SharedConstants;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientPacketListener;
@@ -90,26 +89,26 @@ public final class FabricModWorldEditCUI implements ModInitializer {
         WorldRenderEvents.AFTER_TRANSLUCENT.register(ctx -> {
             if (ctx.advancedTranslucency()) {
                 try {
-                    RenderSystem.getModelViewStack().pushPose();
-                    RenderSystem.getModelViewStack().mulPoseMatrix(ctx.matrixStack().last().pose());
+                    RenderSystem.getModelViewStack().pushMatrix();
+                    RenderSystem.getModelViewStack().mul(ctx.matrixStack().last().pose());
                     RenderSystem.applyModelViewMatrix();
                     ctx.worldRenderer().getTranslucentTarget().bindWrite(false);
                     this.onPostRenderEntities(ctx);
                 } finally {
                     Minecraft.getInstance().getMainRenderTarget().bindWrite(false);
-                    RenderSystem.getModelViewStack().popPose();
+                    RenderSystem.getModelViewStack().popMatrix();
                 }
             }
         });
         WorldRenderEvents.LAST.register(ctx -> {
             if (!ctx.advancedTranslucency()) {
                 try {
-                    RenderSystem.getModelViewStack().pushPose();
-                    RenderSystem.getModelViewStack().mulPoseMatrix(ctx.matrixStack().last().pose());
+                    RenderSystem.getModelViewStack().pushMatrix();
+                    RenderSystem.getModelViewStack().mul(ctx.matrixStack().last().pose());
                     RenderSystem.applyModelViewMatrix();
                     this.onPostRenderEntities(ctx);
                 } finally {
-                    RenderSystem.getModelViewStack().popPose();
+                    RenderSystem.getModelViewStack().popMatrix();
                     RenderSystem.applyModelViewMatrix();
                 }
             }

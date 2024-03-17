@@ -37,7 +37,6 @@ public class CUIConfigList extends ContainerObjectSelectionList<CUIConfigList.Co
     public CUIConfigList(CUIConfigPanel panel, Minecraft minecraft) {
         super(minecraft, panel.width + 45, panel.height - 60, 25, 25);
         this.configuration = panel.configuration;
-        this.setRenderBackground(minecraft.level == null);
 
         for (String key : this.configuration.getConfigArray().keySet()) {
             Object value = configuration.getConfigArray().get(key);
