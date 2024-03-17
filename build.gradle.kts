@@ -90,7 +90,7 @@ dependencies {
     modCompileOnly(libs.viafabricplus.api) {
         isTransitive = false
     }
-    modCompileOnly("com.viaversion:viaversion-common:4.9.2")
+    modCompileOnly(libs.viaversion)
 
     // [1] declare fabric-api dependency...
     fabricApi(libs.fabric.api)
@@ -290,7 +290,7 @@ tasks {
             // Rendering plugins
             addOptional("canvas-renderer", "sodium", "irisshaders")
             // Config screens, version compatibility
-            addOptional("modmenu", "multiconnect", "viafabricplus", "worldedit")
+            addOptional("modmenu", "viafabricplus", "worldedit")
             addJavaVersion("Java $targetVersion")
             addGameVersion(libs.versions.minecraft.get())
         }

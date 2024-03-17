@@ -7,7 +7,6 @@ minecraft = "24w11a"
 fabricLoader = "0.15.7"
 fabricApi = "0.96.10+1.20.5"
 modmenu = "10.0.0-alpha.3"
-multiconnect = "1.5.10"
 viafabricplus = "3.1.0"
 vineflower = "1.9.3"
 
@@ -17,8 +16,8 @@ parchment = { module = "org.parchmentmc.data:parchment-1.20.4", version = "2024.
 fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabricLoader" }
 fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabricApi" }
 modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
-multiconnect-api = { module = "net.earthcomputer.multiconnect:multiconnect-api", version.ref = "multiconnect" }
 viafabricplus-api = { module = "de.florianmichael:viafabricplus", version.ref = "viafabricplus" }
+viaversion = { module = "com.viaversion:viaversion-common", version = "4.9.2" }
 vineflower = { module = "org.vineflower:vineflower", version.ref = "vineflower" }
 worldedit = { module = "com.sk89q.worldedit:worldedit-fabric-mc1.20.2", version = "7.2.17" }
 
