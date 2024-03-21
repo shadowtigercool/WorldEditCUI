@@ -3,9 +3,9 @@ format = { version = "1.1" }
 
 [versions]
 indra = "3.1.3"
-minecraft = "24w11a"
+minecraft = "24w12a"
 fabricLoader = "0.15.7"
-fabricApi = "0.96.10+1.20.5"
+fabricApi = "0.96.12+1.20.5"
 modmenu = "10.0.0-alpha.3"
 viafabricplus = "3.1.0"
 vineflower = "1.9.3"
@@ -25,7 +25,7 @@ worldedit = { module = "com.sk89q.worldedit:worldedit-fabric-mc1.20.2", version 
 curseForgeGradle = { id = "net.darkhax.curseforgegradle", version = "1.1.18" }
 indra-git = { id = "net.kyori.indra.git", version.ref = "indra" }
 javaEcosystemCapabilities = { id = "org.gradlex.java-ecosystem-capabilities", version = "1.5.2" }
-loom = { id = "fabric-loom", version = "1.5.8" }
+loom = { id = "fabric-loom", version = "1.6.2" }
 minotaur = { id = "com.modrinth.minotaur", version = "2.8.7" }
 publishGithubRelease = { id = "ca.stellardrift.publish-github-release", version = "0.1.0" }
 versions = { id = "com.github.ben-manes.versions", version = "0.51.0" }
