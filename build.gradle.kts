@@ -33,7 +33,7 @@ repositories {
     }
 }
 
-val targetVersion = 17
+val targetVersion = 21
 java {
     sourceCompatibility = JavaVersion.toVersion(targetVersion)
     targetCompatibility = sourceCompatibility
