@@ -44,7 +44,7 @@ public class CylinderRegion extends Region
 	@Override
 	public void setCylinderCenter(int x, int y, int z)
 	{
-		this.centre = new PointCube(x, y, z);
+		this.centre = PointCube.pointCube(x, y, z);
 		this.centre.setStyle(this.styles[2]);
 		this.update();
 	}
